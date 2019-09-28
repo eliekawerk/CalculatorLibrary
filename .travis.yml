@@ -8,7 +8,9 @@ before install:
         - pip install codecov
 install:
         - pip install -r requirements.txt
-script: pytest
+script: 
+        - pytest
+        - flake8 .
 after_success:
         - codecov
         
